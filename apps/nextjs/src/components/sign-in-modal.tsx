@@ -14,6 +14,7 @@ import { useSigninModal } from "~/hooks/use-signin-modal";
 export const SignInModal = ({ dict }: { dict: Record<string, string> }) => {
   const signInModal = useSigninModal();
   const [signInClicked, setSignInClicked] = useState(false);
+  const [signInGoogleClicked, setSignInGoogleClicked] = useState(false);
 
   return (
     <Modal showModal={signInModal.isOpen} setShowModal={signInModal.onClose}>
@@ -55,6 +56,30 @@ export const SignInModal = ({ dict }: { dict: Record<string, string> }) => {
               <Icons.GitHub className="mr-2 h-4 w-4" />
             )}{" "}
             {dict.signup_github}
+          </Button>
+
+          <Button
+            variant="default"
+            disabled={signInGoogleClicked}
+            onClick={() => {
+              setSignInGoogleClicked(true);
+              signIn("google", { redirect: false })
+                .then(() =>
+                  setTimeout(() => {
+                    signInModal.onClose();
+                  }, 1000),
+                )
+                .catch((error) => {
+                  console.error("signUp failed:", error);
+                });
+            }}
+          >
+            {signInGoogleClicked ? (
+              <Icons.Spinner className="mr-2 h-4 w-4 animate-spin" />
+            ) : (
+              <Icons.Google className="mr-2 h-4 w-4" />
+            )}{" "}
+            {dict.signup_google}
           </Button>
         </div>
       </div>

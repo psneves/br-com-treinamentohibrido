@@ -1,0 +1,92 @@
+{
+    "price": {
+      "title": "Preços baratos e transparentes!",
+      "pricing": "Preços",
+      "slogan": "Comece a toda velocidade!",
+      "monthly_bill": "Cobrança Mensal",
+      "annual_bill": "Cobrança Anual",
+      "annual_info": "será cobrado quando anual",
+      "monthly_info": "quando cobrado mensalmente",
+      "mo": "/mês",
+      "contact": "para entrar em contato com nossa equipe de suporte.",
+      "contact_2": "Você pode testar as assinaturas e não será cobrado.",
+      "faq": "Perguntas Frequentes",
+      "faq_detail": "Explore nossa FAQ abrangente para encontrar respostas rápidas para perguntas comuns. Se precisar de mais assistência, não hesite em nos contatar para ajuda personalizada.",
+      "signup": "Inscrever-se",
+      "upgrade": "Atualizar",
+      "manage_subscription": "Gerenciar Assinatura",
+      "go_to_dashboard": "Ir para o painel",
+      "": ""
+    },
+    "marketing": {
+      "introducing": "Apresentando Saasfly",
+      "title": "Saasfly: Um novo jogador SaaS? Torne as coisas mais fáceis.",
+      "sub_title": "Sua solução completa Tudo-em-Um para construir serviços SaaS.",
+      "get_started": "Começar",
+      "view_on_github": "Ver no GitHub",
+      "explore_product": "Explorar Produto",
+      "features": "Recursos",
+      "sub_features": "Nativo em nuvem: Simplificando a tecnologia e reduzindo custos para startups.",
+      "k8s_features": "Desenvolvimento rápido e simples",
+      "devops_features": "Implantação fácil de aplicativos",
+      "price_features": "Eficiente economicamente para ambientes de produção.",
+      "main_nav_features": "Recursos",
+      "main_nav_pricing": "Preços",
+      "main_nav_products": "Produtos",
+      "main_nav_blog": "Blog",
+      "main_nav_documentation": "Documentação",
+      "login": "Entrar",
+      "signup": "Inscrever-se",
+      "": ""
+    },
+    "login": {
+      "back": "Voltar",
+      "welcome_back": "Bem-vindo de volta",
+      "signin_title": "Digite seu e-mail para acessar sua conta",
+      "singup_title": "Não tem uma conta? Inscreva-se agora.",
+      "signin_email": "Entrar com Email",
+      "signin_others": "Ou continue com",
+      "signup": "Inscrever-se",
+      "privacy": "apenas seu e-mail e foto de perfil serão armazenados.",
+      "signup_github": "Inscrever-se com Github",
+      "signup_google": "Inscrever-se com Google",
+      "": ""
+    },
+    "common": {
+      "copyright": "Copyright © ${currentYear} Nextify Limited. Todos os direitos reservados.",
+      "dashboard": {
+        "main_nav_documentation": "Documentação",
+        "main_nav_support": "Suporte",
+        "sidebar_nav_clusters": "Clusters",
+        "sidebar_nav_billing": "Faturamento",
+        "sidebar_nav_settings": "Configurações",
+        "title_text": "Crie e gerencie clusters."
+      },
+      "": ""
+    },
+    "business": {
+      "k8s": {
+        "new_cluster": "Novo Cluster",
+        "no_cluster_title": "Nenhum cluster criado",
+        "no_cluster_content": "Você ainda não tem nenhum cluster. Comece criando um cluster.",
+        "": ""
+      },
+      "billing": {
+        "billing": "Faturamento",
+        "content": "Gerencie sua assinatura e detalhes de faturamento",
+        "noSubscription": "Você não está inscrito em nenhum plano.",
+        "subscriptionInfo": "Você está atualmente no plano <strong>{plan}</strong>. Sua assinatura será renovada em <strong>{date}</strong>.",
+        "manage_subscription": "Gerenciar Assinatura",
+        "upgrade": "atualizar",
+        "": ""
+      }
+    },
+    "dropdown": {
+      "dashboard": "Painel",
+      "billing": "Faturamento",
+      "settings": "Configurações",
+      "sign_out": "Sair",
+      "": ""
+    }
+  }
+  

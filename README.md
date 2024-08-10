@@ -183,7 +183,7 @@ bun run dev:web
 
 ## 📜 License
 
-This project is licensed under the MIT License. For more information, see the [LICENSE](./LICENSE) file.
+This project is licensed under the GNU General Public License. For more information, see the [LICENSE](./LICENSE) file.
 
 ## 🙏 Credits
 

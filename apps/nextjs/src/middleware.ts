@@ -12,13 +12,13 @@ const noNeedProcessRoute = [".*\\.png", ".*\\.jpg", ".*\\.opengraph-image.png"];
 const noRedirectRoute = ["/api(.*)", "/trpc(.*)", "/admin"];
 
 const publicRoute = [
-  "/(\\w{2}/)?signin(.*)",
-  "/(\\w{2}/)?terms(.*)",
-  "/(\\w{2}/)?privacy(.*)",
-  "/(\\w{2}/)?docs(.*)",
-  "/(\\w{2}/)?blog(.*)",
-  "/(\\w{2}/)?pricing(.*)",
-  "^/\\w{2}$", // root with locale
+  "/(\\w{2}(-\\w{2})?/)?signin(.*)",
+  "/(\\w{2}(-\\w{2})?/)?terms(.*)",
+  "/(\\w{2}(-\\w{2})?/)?privacy(.*)",
+  "/(\\w{2}(-\\w{2})?/)?docs(.*)",
+  "/(\\w{2}(-\\w{2})?/)?blog(.*)",
+  "/(\\w{2}(-\\w{2})?/)?pricing(.*)",
+  "^/\\w{2}(-\\w{2})?$", // root with locale
 ];
 
 function getLocale(request: NextRequest): string | undefined {
@@ -81,7 +81,7 @@ export default async function middleware(request: NextRequest) {
   }
 
   if (isPublicPage(request)) {
-    return null;
+    return NextResponse.next();
   }
   // @ts-ignore
   return authMiddleware(request, null);
@@ -92,7 +92,7 @@ const authMiddleware = withAuth(
     const token = await getToken({ req });
     const isAuth = !!token;
     const isAdmin = token?.isAdmin;
-    const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(
+    const isAuthPage = /^\/[a-zA-Z]{2,}(-[a-zA-Z]{2,})?\/(login|register)/.test(
       req.nextUrl.pathname,
     );
     const isAuthRoute = /^\/api\/trpc\//.test(req.nextUrl.pathname);
@@ -121,6 +121,7 @@ const authMiddleware = withAuth(
         new URL(`/${locale}/login?from=${encodeURIComponent(from)}`, req.url),
       );
     }
+    return NextResponse.next();
   },
   {
     callbacks: {
