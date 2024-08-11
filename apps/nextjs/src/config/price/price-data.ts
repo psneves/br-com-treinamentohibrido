@@ -16,71 +16,7 @@ interface SubscriptionPlanTranslation {
   };
 }
 
-export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
-  zh: [
-    {
-      id: "starter",
-      title: "入门版",
-      description: "适合初学者",
-      benefits: ["每月最多1个集群", "基础分析和报告", "访问基础功能"],
-      limitations: [
-        "无法优先获取新功能",
-        "有限的客户支持",
-        "无法自定义品牌",
-        "对商业资源的访问受限",
-      ],
-      prices: {
-        monthly: 0,
-        yearly: 0,
-      },
-      stripeIds: {
-        monthly: null,
-        yearly: null,
-      },
-    },
-    {
-      id: "pro",
-      title: "专业版",
-      description: "解锁高级功能",
-      benefits: [
-        "每月最多3个集群",
-        "高级分析和报告",
-        "访问商业模板",
-        "优先客户支持",
-        "独家网络研讨会和培训",
-      ],
-      limitations: ["无法自定义品牌", "对商业资源的访问受限"],
-      prices: {
-        monthly: 30,
-        yearly: 288,
-      },
-      stripeIds: {
-        monthly: env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID,
-        yearly: env.NEXT_PUBLIC_STRIPE_PRO_YEARLY_PRICE_ID,
-      },
-    },
-    {
-      id: "business",
-      title: "商业版",
-      description: "适合高级用户",
-      benefits: [
-        "每月最多10个集群",
-        "实时分析和报告",
-        "访问所有模板，包括自定义品牌",
-        "全天候商业客户支持",
-        "个性化的配置和账户管理",
-      ],
-      limitations: [],
-      prices: {
-        monthly: 60,
-        yearly: 600,
-      },
-      stripeIds: {
-        monthly: env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PRICE_ID,
-        yearly: env.NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PRICE_ID,
-      },
-    },
-  ],
+export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {  
   en: [
     {
       id: "starter",
@@ -151,22 +87,22 @@ export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
         yearly: env.NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PRICE_ID,
       },
     },
-  ],
-  ja: [
+  ],  
+  'pt-BR': [
     {
       id: "starter",
-      title: "スターター",
-      description: "初心者向け",
+      title: "Iniciante",
+      description: "Para Iniciantes",
       benefits: [
-        "月に最大1つのクラスター",
-        "基本的な分析とレポート",
-        "基本機能へのアクセス",
+        "Até 1 cluster por mês",
+        "Análises e relatórios básicos",
+        "Acesso a recursos básicos",
       ],
       limitations: [
-        "新機能への優先アクセスなし",
-        "限定的なカスタマーサポート",
-        "カスタムブランディングなし",
-        "ビジネスリソースへのアクセスが限定的",
+        "Sem acesso prioritário a novos recursos",
+        "Suporte ao cliente limitado",
+        "Sem personalização de marca",
+        "Acesso limitado a recursos empresariais",
       ],
       prices: {
         monthly: 0,
@@ -179,18 +115,18 @@ export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
     },
     {
       id: "pro",
-      title: "プロ",
-      description: "高度な機能のロックを解除",
+      title: "Pro",
+      description: "Desbloqueie Recursos Avançados",
       benefits: [
-        "月に最大3つのクラスター",
-        "高度な分析とレポート",
-        "ビジネステンプレートへのアクセス",
-        "優先カスタマーサポート",
-        "独占的なウェビナーとトレーニング",
+        "Até 3 clusters por mês",
+        "Análises e relatórios avançados",
+        "Acesso a modelos empresariais",
+        "Suporte prioritário ao cliente",
+        "Webinars e treinamentos exclusivos",
       ],
       limitations: [
-        "カスタムブランディングなし",
-        "ビジネスリソースへのアクセスが限定的",
+        "Sem personalização de marca",
+        "Acesso limitado a recursos empresariais",
       ],
       prices: {
         monthly: 30,
@@ -203,14 +139,14 @@ export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
     },
     {
       id: "business",
-      title: "ビジネス",
-      description: "パワーユーザー向け",
+      title: "Business",
+      description: "Para Usuários Avançados",
       benefits: [
-        "月に最大10つのクラスター",
-        "リアルタイムの分析とレポート",
-        "すべてのテンプレート（カスタムブランディングを含む）へのアクセス",
-        "24/7のビジネスカスタマーサポート",
-        "パーソナライズされた設定とアカウント管理",
+        "Até 10 clusters por mês",
+        "Análises e relatórios em tempo real",
+        "Acesso a todos os modelos, incluindo personalização de marca",
+        "Suporte ao cliente empresarial 24/7",
+        "Configuração e gerenciamento de conta personalizados",
       ],
       limitations: [],
       prices: {
@@ -223,72 +159,5 @@ export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
       },
     },
   ],
-  ko: [
-    {
-      id: "starter",
-      title: "스타터",
-      description: "초보자를 위한",
-      benefits: [
-        "월 최대 1개의 클러스터",
-        "기본 분석 및 보고",
-        "기본 기능에 대한 액세스",
-      ],
-      limitations: [
-        "새로운 기능에 대한 우선 액세스 없음",
-        "제한된 고객 지원",
-        "맞춤 브랜딩 없음",
-        "비즈니스 리소스에 대한 액세스 제한",
-      ],
-      prices: {
-        monthly: 0,
-        yearly: 0,
-      },
-      stripeIds: {
-        monthly: null,
-        yearly: null,
-      },
-    },
-    {
-      id: "pro",
-      title: "프로",
-      description: "고급 기능 잠금 해제",
-      benefits: [
-        "월 최대 3개의 클러스터",
-        "고급 분석 및 보고",
-        "비즈니스 템플릿에 대한 액세스",
-        "우선 고객 지원",
-        "독점 웹 세미나 및 교육",
-      ],
-      limitations: ["맞춤 브랜딩 없음", "비즈니스 리소스에 대한 액세스 제한"],
-      prices: {
-        monthly: 30,
-        yearly: 288,
-      },
-      stripeIds: {
-        monthly: env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID,
-        yearly: env.NEXT_PUBLIC_STRIPE_PRO_YEARLY_PRICE_ID,
-      },
-    },
-    {
-      id: "business",
-      title: "비즈니스",
-      description: "파워 사용자를 위한",
-      benefits: [
-        "월 최대 10개의 클러스터",
-        "실시간 분석 및 보고",
-        "모든 템플릿에 대한 액세스, 맞춤 브랜딩 포함",
-        "24/7 비즈니스 고객 지원",
-        "맞춤 설정 및 계정 관리",
-      ],
-      limitations: [],
-      prices: {
-        monthly: 60,
-        yearly: 600,
-      },
-      stripeIds: {
-        monthly: env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PRICE_ID,
-        yearly: env.NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PRICE_ID,
-      },
-    },
-  ],
+  
 };
