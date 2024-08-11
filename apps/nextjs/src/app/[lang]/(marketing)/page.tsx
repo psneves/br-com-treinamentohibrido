@@ -68,24 +68,13 @@ export default async function IndexPage({
                     </span>
                   </ShimmerButton>
                 </Link>
-
-                <Link href="https://github.com/saasfly/saasfly" target="_blank">
-                  <div className="flex h-full items-center justify-center">
-                    <Icons.GitHub className="mr-2 h-6 w-6" />
-                    <span className="text-base font-semibold">
-                      {dict.marketing.view_on_github || "View on GitHub"}
-                    </span>
-                  </div>
-                </Link>
               </div>
             </div>
           </div>
 
           <div className="hidden h-full w-full xl:block">
             <div className="flex flex-col pt-28">
-              <Meteorss meteor={meteors_data} />
               <div className="mt-4 flex w-full justify-between">
-                <XBlogArticle />
                 <div className="ml-4">
                   <FeaturesCard />
                 </div>
@@ -95,6 +84,7 @@ export default async function IndexPage({
         </div>
       </section>
 
+      {/* 
       <section className="hidden h-[100vh] w-full xl:block">
         <div className="flex h-full w-full justify-between px-[220px]">
           <div className="flex w-[60%] flex-col pr-4 pt-40">
@@ -140,6 +130,7 @@ export default async function IndexPage({
           </div>
         </div>
       </section>
+      */}
     </>
   );
 }

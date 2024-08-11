@@ -13,35 +13,35 @@ interface Item {
 
 let notifications = [
   {
-    name: "Payment received",
-    description: "Stripe subscription",
-    time: "15m ago",
-
-    icon: "💸",
+    name: "Novo Plano Adquirido",
+    description: "Você adquiriu um novo plano de treino",
+    time: "15 minutos atrás",
+    icon: "💪",
     color: "#00C9A7",
   },
   {
-    name: "User signed up",
-    description: "Auth, simple and clean",
-    time: "10m ago",
+    name: "Novo Usuário Inscrito",
+    description: "Bem-vindo ao Treinamento Híbrido",
+    time: "10 minutos atrás",
     icon: "👤",
     color: "#FFB800",
   },
   {
-    name: "New Emails",
-    description: "Create beautiful emails",
-    time: "5m ago",
-    icon: "💬",
+    name: "Meta de Treino Alcançada",
+    description: "Parabéns por alcançar sua meta de treino!",
+    time: "5 minutos atrás",
+    icon: "🏆",
     color: "#FF3D71",
   },
   {
-    name: "Easy Deploy",
-    description: "Deploy your app with ease",
-    time: "2m ago",
-    icon: "🗞️",
+    name: "Plano de Treino Atualizado",
+    description: "Seu plano de treino foi atualizado com sucesso",
+    time: "2 minutos atrás",
+    icon: "📝",
     color: "#1E86FF",
   },
 ];
+
 
 notifications = Array.from({ length: 10 }, () => notifications).flat();
 
