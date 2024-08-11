@@ -82,7 +82,7 @@ export function UserAuthForm({
             </Label>
             <Input
               id="email"
-              placeholder="name@example.com"
+              placeholder="email@exemplo.com"
               type="email"
               autoCapitalize="none"
               autoComplete="email"

@@ -52,6 +52,10 @@
     "signup_google": "Sign Up with Google",
     "": ""
   },
+  "register": {
+    "title": "Create an account",
+    "subtitle": "Type your email below"
+  },
   "common": {
     "copyright": "Copyright © ${currentYear} Nextify Limited. All rights reserved.",
     "dashboard": {
