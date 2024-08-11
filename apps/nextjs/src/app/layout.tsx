@@ -56,7 +56,7 @@ export const metadata = {
   creator: "Saasfly",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "pt_BR",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -77,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <head />
       {/*<Suspense>*/}
       {/*  <PostHogPageview />*/}
